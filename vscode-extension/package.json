@@ -1,0 +1,28 @@
+{
+  "name": "norima",
+  "displayName": "Norima",
+  "publisher": "belinium-lka",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.60.0" },
+  "description": "Norima language support (file association for .norm files; logo stored in /logos.norm)",
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "norima",
+        "extensions": [".norm"],
+        "aliases": ["Norima", "norima"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "norima-icons",
+        "label": "Norima Icons",
+        "path": "./icons/icon-theme.json"
+      }
+    ]
+  },
+  "activationEvents": ["onLanguage:norima"],
+  "main": "./client/extension.js"
+}

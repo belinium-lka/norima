@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "norima"
+version = "0.0.0"
+description = "Norima language prototype"
+readme = "README.md"
+authors = [ { name = "norima" } ]
+requires-python = ">=3.10"
+
+[project.scripts]
+hem = "tools.hem.cli:main"

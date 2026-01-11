@@ -1,0 +1,21 @@
+{
+  "name": "norima",
+  "rules": {
+    "source_file": { "type": "seq", "members": ["_stmt*"] },
+    "_stmt": { "type": "choice", "members": ["function_def", "var_decl", "expr_stmt"] },
+    "function_def": { "type": "seq", "members": ["func", "identifier", "parameters", "block"] },
+    "var_decl": { "type": "seq", "members": ["let", "identifier", "=", "expression", ";"] },
+    "expr_stmt": { "type": "seq", "members": ["expression", ";"] },
+    "parameters": { "type": "seq", "members": ["(", "identifier*", ")"] },
+    "block": { "type": "seq", "members": ["{", "_stmt*", "}"] },
+    "expression": { "type": "choice", "members": ["call_expr", "string", "identifier"] },
+    "call_expr": { "type": "seq", "members": ["identifier", "(", "argument_list?", ")"] },
+    "argument_list": { "type": "seq", "members": ["expression", ",*", "expression*"] },
+    "identifier": { "type": "token", "pattern": "[A-Za-z_][A-Za-z0-9_]*" },
+    "string": { "type": "token", "pattern": "\"(.*?)\"" }
+  },
+  "metadata": {
+    "version": "0.1",
+    "notes": "Initial skeleton for Tree-sitter grammar. Expand with tokens, expressions, and declarations."
+  }
+}

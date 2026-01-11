@@ -1,0 +1,13 @@
+{
+  "iconDefinitions": {
+    "norima": { "iconPath": "./icons/norima.svg" }
+  },
+  "fileExtensions": {
+    "norm": "norima"
+  },
+  "fileNames": {
+  },
+  "languageIds": {
+    "norima": "norima"
+  }
+}

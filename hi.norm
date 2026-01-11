@@ -1,0 +1,7 @@
+// hi.norm
+// Your first Norima program
+
+func main() {
+    let message = "Hello from Norima!"
+    print(message)
+}
